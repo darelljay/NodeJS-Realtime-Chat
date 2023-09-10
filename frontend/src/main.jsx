@@ -1,17 +1,6 @@
-import { useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-import "./App.css";
-
-import AuthPage from "./AuthPage";
-import ChatsPage from "./ChatsPage";
-
-function App() {
-  const [user, setUser] = useState(undefined);
-
-  if (!user) {
-    return <AuthPage onAuth={(user) => setUser(user)} />;
-  } else {
-    return <ChatsPage user={user} />;
-  }
-}
-export default App;
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
